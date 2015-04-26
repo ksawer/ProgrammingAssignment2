@@ -36,9 +36,9 @@ cacheSolve <- function(x, ...) {#as an argument is taken return of makeCacheMatr
                 message("getting cached inverse")
                 return(mx)	#... then return of the inverse from the cache, exit of the fonction
         }
-	minv <- x$get()		#get the initial matrix
-        mx <- solve(minv, ...)	#invering matrix if the cache is null
-        x$setinv(mx)		#setting inversion in the cache
+	minv <- x$get()		#on the other hand gets the initial matrix
+        mx <- solve(minv, ...)	#inverts matrix if the cache is null
+        x$setinv(mx)		#setts inversion in the cache
         mx			#Return of the Inverse of matrix passed to makeCacheMatrix
         ## Return a matrix that is the inverse of 'x'
 }
